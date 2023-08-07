@@ -5,6 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'package:portfolio/about.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/contact.dart';
+import 'package:portfolio/homepage_slider.dart';
 import 'package:portfolio/projects.dart';
 
 class MyHomepage extends StatefulWidget {
@@ -95,39 +96,42 @@ class _MyHomepageState extends State<MyHomepage> {
                 color: Colors.black),
             child: Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  height: 400,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('images/background.jpg'))),
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(20.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Port',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 50,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              'folio',
-                              style: TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 50,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                HomepageSlider(),
+                // Container(
+                //   width: double.infinity,
+                //   height: MediaQuery.of(context).size.height * .9,
+                //   decoration: BoxDecoration(
+                //       border: Border.all(color: Colors.white10, width: 5),
+                //       image: const DecorationImage(
+                //           image: AssetImage('images/heroCover.jpg'),
+                //           fit: BoxFit.cover)),
+                //   child: const Column(
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: [
+                //       Padding(
+                //         padding: EdgeInsets.all(20.0),
+                //         child: Row(
+                //           children: [
+                //             Text(
+                //               'Port',
+                //               style: TextStyle(
+                //                   color: Colors.white,
+                //                   fontSize: 50,
+                //                   fontWeight: FontWeight.bold),
+                //             ),
+                //             Text(
+                //               'folio',
+                //               style: TextStyle(
+                //                   color: Colors.red,
+                //                   fontSize: 50,
+                //                   fontWeight: FontWeight.bold),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [],
