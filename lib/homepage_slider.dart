@@ -13,14 +13,11 @@ class _HomepageSliderState extends State<HomepageSlider> {
   final controller = CarouselController();
   int activeIndex = 0;
   final urlImages = [
-    'images/background.jpg',
+    'images/heroCover2.jpg',
+    'images/heroCover3.jpg',
+    'images/heroCover4.jpg',
+    'images/heroCover5.jpg',
     'images/heroCover.jpg',
-    'images/background.jpg',
-    'images/heroCover.jpg',
-    'images/background.jpg',
-    'images/heroCover.jpg',
-    'images/background.jpg',
-    'images/heroCover.jpg'
   ];
   @override
   Widget build(BuildContext context) {

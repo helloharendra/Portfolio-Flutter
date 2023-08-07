@@ -97,14 +97,15 @@ class _MyHomepageState extends State<MyHomepage> {
             child: Column(
               children: [
                 HomepageSlider(),
+
                 // Container(
                 //   width: double.infinity,
-                //   height: MediaQuery.of(context).size.height * .9,
+                //   height: MediaQuery.of(context).size.height,
                 //   decoration: BoxDecoration(
                 //       border: Border.all(color: Colors.white10, width: 5),
                 //       image: const DecorationImage(
-                //           image: AssetImage('images/heroCover.jpg'),
-                //           fit: BoxFit.cover)),
+                //           image: AssetImage('images/hero.png'),
+                //           fit: BoxFit.fitWidth)),
                 //   child: const Column(
                 //     crossAxisAlignment: CrossAxisAlignment.start,
                 //     children: [
@@ -132,6 +133,7 @@ class _MyHomepageState extends State<MyHomepage> {
                 //     ],
                 //   ),
                 // ),
+
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [],
@@ -209,8 +211,10 @@ class _MyHomepageState extends State<MyHomepage> {
                               width: 350,
                               decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                      image:
-                                          AssetImage('images/heroCover.jpg')),
+                                      image: AssetImage(
+                                        'images/heroCover.jpg',
+                                      ),
+                                      fit: BoxFit.cover),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
                             ),
@@ -231,8 +235,9 @@ class _MyHomepageState extends State<MyHomepage> {
                               width: 350,
                               decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                      image:
-                                          AssetImage('images/heroCover.jpg')),
+                                      image: AssetImage(
+                                    'images/heroCover.jpg',
+                                  )),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
                             ),
