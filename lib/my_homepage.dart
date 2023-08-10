@@ -1,7 +1,6 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:portfolio/about.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/contact.dart';

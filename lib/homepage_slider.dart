@@ -13,9 +13,9 @@ class _HomepageSliderState extends State<HomepageSlider> {
   final controller = CarouselController();
   int activeIndex = 0;
   final urlImages = [
-    'images/heroCover2.jpg',
-    'images/heroCover3.jpg',
-    'images/heroCover4.jpg',
+    'images/ai.gif',
+    'images/ai1.gif',
+    'images/ai2.gif',
     'images/heroCover5.jpg',
     'images/heroCover.jpg',
   ];
