@@ -28,6 +28,7 @@ class _HomepageSliderState extends State<HomepageSlider> {
             itemCount: urlImages.length,
             options: CarouselOptions(
               height: MediaQuery.of(context).size.height * .8,
+
               onPageChanged: (index, reason) {
                 setState(() {
                   activeIndex = index;
