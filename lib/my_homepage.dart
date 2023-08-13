@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/about.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/contact.dart';
+import 'package:portfolio/contact_us_form.dart';
 import 'package:portfolio/homepage_slider.dart';
 import 'package:portfolio/portfolio.dart';
 import 'package:portfolio/projects.dart';
@@ -313,29 +314,29 @@ class _MyHomepageState extends State<MyHomepage> {
                   ),
                 ),
                 const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'CONTACT',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'US',
-                      style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'CONTACT',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 38,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        'US',
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 38,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ]),
+                const ContactUsForm(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
