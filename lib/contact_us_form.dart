@@ -18,8 +18,9 @@ class _ContactUsFormState extends State<ContactUsForm> {
           mainAxisAlignment: MainAxisAlignment.start,
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Wrap(
+              spacing: 10,
+              runSpacing: 20,
               children: [
                 SizedBox(
                   width: 300,
@@ -63,27 +64,32 @@ class _ContactUsFormState extends State<ContactUsForm> {
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              width: 620,
-              child: TextFormField(
-                decoration: const InputDecoration(
-                    hintText: 'Enter Email',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(6)))),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return ('Please Enter Details');
-                  } else {
-                    return null;
-                  }
-                },
-              ),
+            Wrap(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                        hintText: 'Enter Email',
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(6)))),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return ('Please Enter Details');
+                      } else {
+                        return null;
+                      }
+                    },
+                  ),
+                ),
+              ],
             ),
             const SizedBox(
               height: 20,
             ),
             SizedBox(
-              width: 620,
+              width: MediaQuery.of(context).size.width * 0.55,
               child: TextFormField(
                 decoration: const InputDecoration(
                     hintText: 'Enter Message',

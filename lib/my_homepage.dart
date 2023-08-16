@@ -5,6 +5,7 @@ import 'package:portfolio/about.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/contact.dart';
 import 'package:portfolio/contact_us_form.dart';
+import 'package:portfolio/footer.dart';
 import 'package:portfolio/homepage_slider.dart';
 import 'package:portfolio/portfolio.dart';
 import 'package:portfolio/projects.dart';
@@ -23,8 +24,7 @@ class _MyHomepageState extends State<MyHomepage> {
         appBar: AppBar(
           leading: const Icon(Icons.home),
           backgroundColor: Colors.redAccent,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+          title: Wrap(
             children: [
               GestureDetector(
                   onTap: () {
@@ -110,57 +110,13 @@ class _MyHomepageState extends State<MyHomepage> {
             child: Column(
               children: [
                 const HomepageSlider(),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                const Wrap(
                   children: [],
                 ),
                 const SizedBox(height: 20),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'ABOUT',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'US',
-                      style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      aboutText,
-                      style: const TextStyle(color: Colors.black, fontSize: 16),
-                      textAlign: TextAlign.left,
-                    ),
-                    Container(
-                      height: 400,
-                      width: 500,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('images/heroCover.jpg')),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                      ),
-                    ),
-                  ],
+                const AboutScreen(),
+                const SizedBox(
+                  height: 20,
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -168,6 +124,8 @@ class _MyHomepageState extends State<MyHomepage> {
                     Text(
                       'OUR',
                       style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.red,
                           color: Colors.black,
                           fontSize: 38,
                           fontWeight: FontWeight.bold),
@@ -179,6 +137,8 @@ class _MyHomepageState extends State<MyHomepage> {
                     Text(
                       'TEAM',
                       style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.black,
                           color: Colors.red,
                           fontSize: 38,
                           fontWeight: FontWeight.bold),
@@ -186,133 +146,186 @@ class _MyHomepageState extends State<MyHomepage> {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 350,
+                          width: 350,
+                          decoration: const BoxDecoration(
+                              color: Colors.black,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          child: const Column(children: [
+                            Padding(
+                              padding: EdgeInsets.all(20.0),
+                              child: CircleAvatar(
+                                radius: 100,
+                                backgroundImage:
+                                    AssetImage('images/heroCover.jpg'),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Harendra Prajapati",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Full Stack Developer",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
+                        ),
+                      ),
                       const SizedBox(height: 20),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 350,
-                              width: 350,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image:
-                                          AssetImage('images/heroCover.jpg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
+                        child: Container(
+                          height: 350,
+                          width: 350,
+                          decoration: const BoxDecoration(
+                              color: Colors.black,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          child: const Column(children: [
+                            Padding(
+                              padding: EdgeInsets.all(20.0),
+                              child: CircleAvatar(
+                                radius: 100,
+                                backgroundImage:
+                                    AssetImage('images/heroCover.jpg'),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             Text(
-                              name1,
-                              style: const TextStyle(color: Colors.black),
-                              textAlign: TextAlign.justify,
+                              "Harendra Prajapati",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Java Developer",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                         ),
                       ),
+                      const SizedBox(height: 20),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 350,
-                              width: 350,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage(
-                                      'images/heroCover.jpg',
-                                    ),
-                                  ),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
+                        child: Container(
+                          height: 350,
+                          width: 350,
+                          decoration: const BoxDecoration(
+                              color: Colors.black,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          child: const Column(children: [
+                            Padding(
+                              padding: EdgeInsets.all(20.0),
+                              child: CircleAvatar(
+                                radius: 100,
+                                backgroundImage:
+                                    AssetImage('images/heroCover.jpg'),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             Text(
-                              name1,
-                              style: const TextStyle(color: Colors.black),
-                              textAlign: TextAlign.justify,
+                              "Harendra Prajapati",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Python Developer",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                         ),
                       ),
+                      const SizedBox(height: 20),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 350,
-                              width: 350,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: AssetImage(
-                                        'images/heroCover.jpg',
-                                      )),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
+                        child: Container(
+                          height: 350,
+                          width: 350,
+                          decoration: const BoxDecoration(
+                              color: Colors.black,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          child: const Column(children: [
+                            Padding(
+                              padding: EdgeInsets.all(20.0),
+                              child: CircleAvatar(
+                                radius: 100,
+                                backgroundImage:
+                                    AssetImage('images/heroCover.jpg'),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             Text(
-                              name1,
-                              style: const TextStyle(color: Colors.black),
-                              textAlign: TextAlign.justify,
+                              "Harendra Prajapati",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Flutter Developer",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 350,
-                              width: 350,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image:
-                                          AssetImage('images/heroCover.jpg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
-                            ),
-                            Text(
-                              name1,
-                              style: const TextStyle(color: Colors.black),
-                              textAlign: TextAlign.justify,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 350,
-                              width: 350,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image:
-                                          AssetImage('images/heroCover.jpg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
-                            ),
-                            Text(
-                              name1,
-                              style: const TextStyle(color: Colors.black),
-                              textAlign: TextAlign.justify,
-                            ),
-                          ],
-                        ),
-                      )
+                      const SizedBox(height: 20),
                     ],
                   ),
                 ),
+                const SizedBox(height: 20),
                 const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -336,7 +349,9 @@ class _MyHomepageState extends State<MyHomepage> {
                         textAlign: TextAlign.center,
                       ),
                     ]),
+                const SizedBox(height: 20),
                 const ContactUsForm(),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -350,8 +365,8 @@ class _MyHomepageState extends State<MyHomepage> {
                         },
                         child: Image.asset(
                           'icons/facebook.png',
-                          height: 50,
-                          width: 50,
+                          height: 35,
+                          width: 35,
                         ),
                       ),
                     ),
@@ -365,8 +380,8 @@ class _MyHomepageState extends State<MyHomepage> {
                         },
                         child: Image.asset(
                           'icons/instagram.png',
-                          height: 50,
-                          width: 50,
+                          height: 35,
+                          width: 35,
                         ),
                       ),
                     ),
@@ -380,8 +395,8 @@ class _MyHomepageState extends State<MyHomepage> {
                         },
                         child: Image.asset(
                           'icons/linkedin.png',
-                          height: 50,
-                          width: 50,
+                          height: 35,
+                          width: 35,
                         ),
                       ),
                     ),
@@ -394,13 +409,14 @@ class _MyHomepageState extends State<MyHomepage> {
                         },
                         child: Image.asset(
                           'icons/twitter.png',
-                          height: 50,
-                          width: 50,
+                          height: 35,
+                          width: 35,
                         ),
                       ),
                     )
                   ],
-                )
+                ),
+                const Footer()
               ],
             ),
           ),
