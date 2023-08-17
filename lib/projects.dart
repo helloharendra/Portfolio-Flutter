@@ -48,6 +48,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                   spacing: 20,
                   children: [
                     ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
                         onPressed: () {
                           window.open(
                               'https://github.com/helloharendra/Face-Mask-Detection-Using-Computer-Vision-Python',
@@ -55,6 +58,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                         },
                         child: const Text('FACE MASK DETECTION ')),
                     ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
                         onPressed: () {
                           window.open(
                               'https://github.com/helloharendra/Age-And-Gender-Detection-Using-Computer-Vision',
@@ -62,6 +68,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                         },
                         child: const Text('AGE GENDER DETECTION ')),
                     ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
                         onPressed: () {
                           window.open(
                               'https://github.com/helloharendra/Complete-Food-Delivery-App-Flutter',
@@ -69,6 +78,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                         },
                         child: const Text('FOOD DELIVERY APP')),
                     ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
                         onPressed: () {
                           window.open(
                               'https://github.com/helloharendra/Portfoilo',
@@ -76,6 +88,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                         },
                         child: const Text('PORTFOLIO USIN HTML CSS ')),
                     ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
                         onPressed: () {
                           window.open(
                               'https://github.com/helloharendra/Portfolio-Flutter',
